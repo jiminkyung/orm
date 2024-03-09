@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS 문법 사용 가능 -->
+    <style>
+        td,
+        th {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        .colSecond {
+            width: 20%;
+            background-color: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table -->
+    <table>
+        <caption>식단표</caption>
+        <tbody>
+            <tr>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+            </tr>
+            <tr>
+                <td colspan="2">짜장면</td>
+                <td rowspan="2">치킨</td>
+            </tr>
+            <tr>
+                <td>탕수육</td>
+                <td>근대된장국</td>
+            </tr>
+        </tbody>
+        <colgroup>
+            <col>
+            <col class="colSecond">
+            <col>
+        </colgroup>
+        <tfoot>
+            <tr>
+                <td>맛있음</td>
+                <td>중간</td>
+                <td>맛있음</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- form -->
+    <form>
+        <fieldset>
+            <legend>HTML 스터디 망해가는 이유는?</legend>
+            <label for="nojam">노잼이다</label>
+            <input type="radio" name="reason" value="노잼" id="nojam" checked>
+            <label for="toohard">너무 어렵다</label>
+            <input type="radio" name="reason" value="어려워요" id="toohard">
+            <label for="weekend">주말에 뭐하는 짓이냐</label>
+            <input type="radio" name="reason" value="주말" id="weekend">
+            <br><br>
+            <legend><strong>만약 다른 스터디를 하고 싶다면?</strong></legend>
+            <select id="study">
+                <optgroup label="백엔드">
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C">C</option>
+                </optgroup>
+                <optgroup label="프론트엔드">
+                    <option value="HTML/CSS">HTML/CSS</option>
+                    <option value="JS" selected>자바스크립트</option>
+                </optgroup>
+            </select>
+
+            <legend><strong>마지막으로 하고싶은 말</strong></legend>
+            <textarea name="lastword" id="lastword" cols="30" rows="5"></textarea>
+            <br>
+            <button type="submit">전송하기</button>
+            <button type="reset">다시 작성하기</button>
+        </fieldset>
+    </form>
+
+    <!--강사님 코드-->
+    <form>
+        <fieldset>
+            <legend>HTML 스터디가 망해가는 이유</legend>
+            <label>
+                노잼이다
+                <input type="radio" name="reasome">
+            </label>
+            <label>
+                너무 어렵다
+                <input type="radio" name="reasome">
+            </label>
+            <label>
+                주말에 뭐하는 짓이냐
+                <input type="radio" name="reasome">
+            </label>
+            <br>
+            <label for="">만약 다른 스터디를 하고 싶다면?</label>
+            <br>
+            <select name="lang">
+                <option value="javascript">자바스크립트</option>
+                <option value="python">파이썬</option>
+                <option value="java">자바</option>
+            </select>
+            <br>
+            <label for="lastWord">마지막으로 하고싶은 말</label>
+            <br>
+            <textarea name="lastWord" id="lastWord" cols="30" rows="2"></textarea>
+            <br>
+            <button type="submit">전송하기</button>
+            <button type="reset">다시 작성하기</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

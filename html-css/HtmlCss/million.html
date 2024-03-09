@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1만 시간의 법칙</title>
+  <style>
+    @font-face {
+      font-family: 'OTEnjoystoriesBA';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GmarketSansMedium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    .notosanskr * {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    body {
+      background-color: #5B2386;
+      font-family: 'GmarketSansMedium';
+      font-weight: 400;
+    }
+
+    /* logo */
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon_clock {
+      position: relative;
+    }
+
+    .icon_logo {
+      position: absolute;
+    }
+
+    /* title */
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 70px;
+      gap: 20px;
+    }
+
+    .title_word {
+      font-family: 'OTEnjoystoriesBA';
+      font-weight: 700;
+      font-size: 36px;
+      color: #F5DF4D;
+    }
+
+    .title_ie {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .icon_quotes {
+      position: relative;
+    }
+
+    .title_ie_words {
+      position: absolute;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .title_ie_words p {
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    .title_ie_words span {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    /* user */
+    .user {
+      font-size: 24px;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 110px;
+      gap: 100px;
+    }
+
+    .user_input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .user_input p {
+      margin-top: 0;
+    }
+
+    input[type=text] {
+      border-radius: 7px;
+      width: 228px;
+      height: 57px;
+      margin: 0 20px;
+      border-style: none;
+      font-family: 'GmarketSansMedium';
+      font-weight: 400;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    input::placeholder {
+      font-family: 'GmarketSansMedium';
+      font-weight: 400;
+      font-size: 24px;
+      text-align: center;
+      color: #BABCBE;
+    }
+
+    .user a {
+      font-weight: 700;
+      font-size: 24px;
+      color: #5B2386;
+      background-color: #F5DF4D;
+      text-align: center;
+      width: 565px;
+      height: 66px;
+      border-radius: 56px;
+      border-style: none;
+      line-height: 66px;
+      text-decoration: none;
+    }
+
+    /* user_result */
+    .user_result {
+      font-size: 24px;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+
+    .user_result p {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .user_result span {
+      font-weight: 700;
+      font-size: 72px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    /* user_select */
+    .user_select {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 110px;
+    }
+
+    .user_select a {
+      font-weight: 700;
+      font-size: 24px;
+      color: #5B2386;
+      height: 66px;
+      border-radius: 56px;
+      border-style: none;
+      text-align: center;
+      line-height: 66px;
+      text-decoration: none;
+    }
+
+    .user_select a:first-child {
+      width: 356px;
+      background-color: #F5DF4D;
+    }
+
+    .user_select a:last-child {
+      width: 191px;
+      background-color: #FFFFFF;
+    }
+
+    /* footer */
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      color: #FFFFFF;
+      font-family: 'Noto Sans KR';
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    footer img {
+      width: 125px;
+      height: 25px;
+      margin-bottom: 30px;
+    }
+
+    footer p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F253795ae855443f2bcf20ffa08f40a29%2F5ace0f7713f54eb281ee8349e8ae3ac1"
+      alt="시계" class="icon_clock" />
+    <div class="icon_logo">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F253795ae855443f2bcf20ffa08f40a29%2Fedd7fa6beaa745f9b074599a94445b2f"
+        alt="1만 시간의 법칙" />
+    </div>
+  </div>
+
+  <div class="title">
+    <p class="title_word">"연습은 어제의 당신보다 당신을 더 낫게 만든다."</p>
+    <div class="title_ie">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F253795ae855443f2bcf20ffa08f40a29%2F85ea4ce5a6f4491188c02743cd55e8eb"
+        alt="따옴표" class="icon_quotes" />
+      <section class="title_ie_words">
+        <p><span>1만 시간의 법칙</span>은</p>
+        <p>어떤 분야의 전문가가 되기 위해서는</p>
+        <p>최소한 1만 시간의 훈련이 필요하다는 법칙이다.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="user">
+    <section class="user_input">
+      <p>
+        나는<input type="text" placeholder="예) 프로그래밍">전문가가 될 것이다.
+      </p>
+      <p>
+        그래서 앞으로 매일 하루에 <input type="text" placeholder="예) 5"> 시간씩 훈련할 것이다.
+      </p>
+    </section>
+    <a href="#">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</a>
+  </div>
+
+  <div class="user_result">
+    <p>당신은 <span>프로그래밍</span> 전문가가 되기 위해서</p>
+    <p>대략 <span>5110</span>일 이상 훈련하셔야 합니다! :)</p>
+  </div>
+
+  <div class="user_select">
+    <a href="#">훈련하러 가기 GO! GO!</a>
+    <a href="#">공유하기</a>
+  </div>
+  
+  <footer>
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets%2F253795ae855443f2bcf20ffa08f40a29%2F5c3d1f2f1fe44ebcb438e787ccbe2062"
+      alt="위니브 로고" />
+    <p>※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.</p>
+    <p>수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</p>
+  </footer>
+
+</body>
+
+</html>

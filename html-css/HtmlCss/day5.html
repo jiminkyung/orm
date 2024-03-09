@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            /* 두 가지 방법이 있음. 첫번째는 강사님, 두번쨰는 교안버전. */
+            justify-content: flex-end;
+            /* flex-direction: row-reverse; */
+            align-items: center;
+            border: 1px solid black;
+        }
+        .box {
+            background-color: gold;
+            width: 100px;
+            height: 100px;
+            /* 차례대로 글자 수평정렬, 수직정렬 */
+            text-align: center;
+            line-height: 100px; /* 부모의 높이만큼 준다. */
+            /* 또는 box에 또 flex 속성을 부여해줘도 된다. */
+            /*
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            */
+            font-size: 32px;
+            font-weight: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+    </div>
+</body>
+</html>
