@@ -1,0 +1,47 @@
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+<style>
+    section {
+        padding: 50px;
+    }
+    .error { color: red; }
+</style>
+<section>
+    <h1>{{ post.title }}</h1>
+    <h3>{{ post.content|linebreaks }}</h3>
+    <p>{{ post.author }}</p>
+
+    {% if post.video_file %}
+    <video controls>
+        <source src="{{ post.video_file.url }}">
+        </source>
+    </video>
+    {% endif %}
+
+    <!-- 로그인을 했고, 내가 이 글에 글쓴이라고 한다면 삭제와 업데이트 버튼 노출 -->
+    {% if user.is_authenticated and user == post.author %}
+    <a href="{% url 'tube_update' post.pk %}">수정</a>
+    <form action="{% url 'tube_delete' post.pk %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+    </form>
+    {% endif %}
+
+    {% for tag in post.tags.all %}
+    <a href="/tube/tag/{{ tag.name }}">#{{ tag.name }}</a>
+    {% endfor %}
+
+    {% for comment in post.comments.all %}
+    <p>{{ comment.message }}</p>
+    {% endfor %}
+
+    {% if error_message %}
+    <div class="error">{{ error_message }}</div>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="message">
+        <input type="submit">
+    </form>
+</section>
