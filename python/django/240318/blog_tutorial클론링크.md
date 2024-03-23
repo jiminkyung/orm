@@ -1,0 +1,1 @@
+https://github.com/weniv/django_blog_tutorial.git
