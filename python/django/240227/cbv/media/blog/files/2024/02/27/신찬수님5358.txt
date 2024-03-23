@@ -1,0 +1,100 @@
+--------------------------------------
+# 53
+def solution(data):
+    invest_op, seed = data
+    price_list = [x[0] for x in invest_op]
+    company_list = [x[1] for x in invest_op]
+
+    combination = []
+    for idx, price in enumerate(price_list):
+        if seed >= price:
+            seed -= price 
+            company_name = company_list[idx]
+            combination.append(company_name)
+    return combination
+--------------------------------------
+# 54
+def solution(data):
+
+    room = data[0] # 방 상태 행렬
+    path = data[1] # 경로
+
+    move_set = {'U', 'D', 'L', 'R'} # 움직일 수 있는 경우의 수
+
+    x = 0 # 초기 행
+    y = 0 # 초기 열
+    
+    # 청소기 출발지점 정의
+    count = 0 # 청소기 출발지점이 청소된 칸(0)이라면
+    if room[x][y] == 1: # 청소기 출발지점이 청소되지 않은 칸(1)이라면, 
+        count += 1
+        room[x][y] = 0 # 출발점에서 바로 청소하니 청소된 칸으로 변경
+
+    # 경로 이동
+    for move in path:
+
+        if move == 'U':
+            x -= 1
+
+        elif move == 'D':
+            x += 1
+
+        elif move == 'L':
+            y -= 1
+
+        elif move == 'R':
+            y +=1
+
+        # 방문한 칸 : room[행][열]
+        if room[x][y] == 1: # 방문한 칸이 1이면
+            count += 1
+            room[x][y] = 0 # 방문한 칸의 상태를 청소한 칸으로 변경
+
+    return count
+--------------------------------------
+# 55
+def solution(data):
+    count = 0
+    for row in data:
+        count += row.count(1) 
+    return count
+
+--------------------------------------
+# 56
+def solution(data):
+    stack = []
+    for row_idx, row_data in enumerate(data):
+        for col_idx, col_data in enumerate(row_data):
+            if data[row_idx][col_idx] == 1:
+                point = (row_idx, col_idx)
+                stack.append(point)
+    return stack
+--------------------------------------
+# 57
+def solution(data):
+    matrix = data[0]
+    condition = data[1]
+
+    for row in matrix:
+        false_count = list(map(lambda x:x%condition == 0, row)).count(False)
+        if false_count > 0:
+            return False
+    else: 
+        return True
+--------------------------------------
+# 58
+def solution(data):
+    if len(data) != len(data[0]): # 행의 갯수와 열의 갯수가 다르다면
+        return 'Error'
+
+    import copy
+
+    arr = copy.deepcopy(data)
+
+    length = len(data)
+    for r_idx in range(length):
+        for c_idx in range(length):
+            # 90도 회전 규칙 : (x, y) -> (y, len(data)-x-1)
+            arr[c_idx][length-r_idx-1] = data[r_idx][c_idx] 
+    return arr
+--------------------------------------
