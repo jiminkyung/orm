@@ -1,0 +1,51 @@
+products = [
+    {
+        "id": 1,
+        "name": "좋은 마우스",
+        "price": "300,000",
+        "color": "black",
+        "sold": 10,
+    },
+    {
+        "id": 2,
+        "name": "좋은 키보드",
+        "price": "400,000",
+        "color": "orange",
+        "sold": 32,
+    },
+    {
+        "id": 3,
+        "name": "좋은 모니터",
+        "price": "3,000,000",
+        "color": "white",
+        "sold": 5,
+    },
+    {
+        "id": 4,
+        "name": "좋은 헤드폰",
+        "price": "1,000,000",
+        "color": "red",
+        "sold": 2,
+    },
+    {
+        "id": 5,
+        "name": "좋은 노트북",
+        "price": "9,000,000",
+        "color": "silver",
+        "sold": 40,
+    },
+    {
+        "id": 6,
+        "name": "좋은 스피커",
+        "price": "85,000",
+        "color": "gold",
+        "sold": 10,
+    },
+    {
+        "id": 7,
+        "name": "좋은 충전기",
+        "price": "20,000",
+        "color": "white",
+        "sold": 90,
+    },
+]
